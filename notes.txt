@@ -1,0 +1,34 @@
+Reference text books
+1) Learn to Program with Assembly
+   -- Jonathan Bartlett
+   -- Apress (publisher)
+
+
+movq   64-bits
+movl   32-bits
+movw   16-bits
+movb    8-bits
+
+syscall
+
+addq
+subq
+
+incq
+decq
+
+mulq   -- multiplies rax by source
+divq   -- divides rax by source; remainder in rdx
+          which should be set to 0 before division
+
+
+16 general purpose registers
+----------------------------
+%rax, %rbx, %rcx, %rdx
+%rsi, %rdi, %rbp, %rsp
+%r8 -- %r15
+
+%r11d  <- 32-bits
+%r11w  <- 16-bits
+%r11b  <-  8-bits
+
