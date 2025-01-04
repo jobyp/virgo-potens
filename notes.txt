@@ -32,3 +32,93 @@ divq   -- divides rax by source; remainder in rdx
 %r11w  <- 16-bits
 %r11b  <-  8-bits
 
+special purpose registers
+-------------------------
+%rip
+%eflags -- ZF (zero flag), CF (carry flag)
+
+jz      -- jump if zero
+jnz     -- jump if not zero
+jc      -- jump if carry
+jnc     -- jump if not carry
+
+cmpq    ARG1,   ARG2
+
+je      jump if ARG2 == ARG1
+jne     jump if ARG2 <> ARG1
+ja      jump if ARG2 >  ARG1
+jae     jump if ARG2 >= ARG1
+jb      jump if ARG2 <  ARG1
+jbe     jump if ARG2 <= ARG1
+
+
+The suffixes on the jump instruction -- e, ne, a, ae, b, be --
+are known as condition codes.
+
+---------------------------
+cmovgq    %rax,        %rbx
+---------------------------
+The above instruction will move the contents of %rax into %rbx
+if the previous comparison determined a "greater than"
+condition. Likewise,
+----------------------------
+cmovleq   %rax,         %rbx
+----------------------------
+will do the same if it was a "less than or equal to" condition.
+
+-------------
+loopq   label
+-------------
+loop instruction does the following
+1. decq %rcx   (decrement %rcx)
+2. jnz  label  (jump if result of decrement is not zero).
+
+
+
+Glorious Archangel St Raphael, great prince of the heavenly
+court, you are illustrious for your gifts of wisdom and grace.
+You are a guide of those who journey by land or sea or air,
+consoler of the afflicted, and refuge of sinners. I beg you,
+assist me in all my needs and in all the sufferings of this life.
+In particular, help my marriage be healed, our hearts reconciled
+and our souls saved.
+
+
+
+Glorious Archangel Saint Raphael,
+great prince of the heavenly court,
+you are illustrious
+for your gifts of wisdom and grace.
+You are a guide of those who journey
+by land or sea or air,
+consoler of the afflicted,
+and refuge of sinners.
+I beg you,
+assist me in all my needs
+and in all the sufferings of this life,
+as once you helped
+the young Tobias on his travels.
+Because you are the medicine of God,
+I humbly pray you to heal the many infirmities
+of my soul and the ills that afflict my body.
+I especially ask of you the favor
+
+(Make your request here...)
+
+and the great grace of purity
+to prepare me to be the temple of the Holy Spirit.
+
+Amen.
+
+St. Raphael,
+of the glorious seven
+who stand before the throne of Him
+who lives and reigns,
+Angel of health,
+the Lord has filled your hand
+with balm from heaven
+to soothe or cure our pains.
+Heal or cure the victim of disease.
+And guide our steps when doubtful of our ways.
+Amen.
+
