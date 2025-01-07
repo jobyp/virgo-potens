@@ -74,6 +74,9 @@ loop instruction does the following
 2. jnz  label  (jump if result of decrement is not zero).
 
 
+For character data, we'd have to
+%ah, %al, %bh, %bl, %ch, %cl, %dh and %dl
+
 
 Glorious Archangel St Raphael, great prince of the heavenly
 court, you are illustrious for your gifts of wisdom and grace.
