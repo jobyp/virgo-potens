@@ -1,11 +1,11 @@
 # Object files are part of standalone executable
 # so they don't contain _start symbol
-OBJS:=persondata exponentfunc
+OBJS:=persondata exponentfunc hello
 
 # progs are the final executable, consisting of one or
 # more object files.
 PROGS:=$(filter-out $(OBJS),$(patsubst %.s,%,$(wildcard *.s)))
-PROGS+=runexponent_c
+PROGS+=runexponent_c hello_c
 
 CC:=musl-gcc -static
 
@@ -23,9 +23,10 @@ all: $(PROGS)
 # Additional dependencies
 browncount tallest: persondata.o
 runexponent_c runexponent: exponentfunc.o
+hello_c: hello.o
 
 # -Wl,-z,noexecstack
-runexponent_c: runexponent_c.o
+%_c: %_c.o
 	$(CC) -o $@ $^ $(LDFLAGS)
 
 % : %.s

@@ -5,6 +5,8 @@
 
 	.section 	.text
 
+	.equ		EXP,		-8
+	.equ		BASE,		-16
 exponent:
 
 	# %rdi has the base
@@ -15,10 +17,10 @@ exponent:
 	subq 		$16, 		%rsp
 
 	# Save the current exponent on the stack
-	movq 		%rsi, 		-8(%rbp)
+	movq 		%rsi, 		EXP(%rbp)
 
 	# Save the base
-	movq 		%rdi, 		-16(%rbp)
+	movq 		%rdi, 		BASE(%rbp)
 
 	movq 		$1, 		%rax
 
