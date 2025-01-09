@@ -78,6 +78,27 @@ For character data, we'd have to
 %ah, %al, %bh, %bl, %ch, %cl, %dh and %dl
 
 
+x86-64 ABI (application binary interface)
+
+-> preservation of registers
+----------------------------
+   The calling convention require that the function being called
+   should preserve the contents of %rbp, %rbx, %r12 to %r15.
+
+-> passing input parameters
+---------------------------
+   Parameters come into the function primarily in registers. Parameters
+   are identified by position, and the positions correspond to the
+   registers as follows
+
+   1. %rdi
+   2. %rsi
+   3. %rdx
+   4. %rcx
+   5. %r8
+   6. %r9
+
+
 Glorious Archangel St Raphael, great prince of the heavenly
 court, you are illustrious for your gifts of wisdom and grace.
 You are a guide of those who journey by land or sea or air,
