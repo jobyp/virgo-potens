@@ -1,0 +1,7 @@
+black
+Cython
+ipython
+matplotlib
+numpy
+PyQt6
+scapy
