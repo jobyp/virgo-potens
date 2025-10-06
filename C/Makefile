@@ -8,7 +8,8 @@ CFLAGS:=-pedantic -Wall -Wextra -Werror -Og -g3  -W -std=gnu18 \
 	-Wconversion -Warith-conversion \
 	-Wuninitialized -Wformat=2 -fanalyzer
 
-LDFLAGS:=-lm
+#LDFLAGS:=-lm
+LDFLAGS:=
 
 
 .PHONY: all
