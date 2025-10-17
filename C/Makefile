@@ -4,12 +4,11 @@ PROGS=$(patsubst %.c,%,$(wildcard *.c))
 CC:=gcc
 
 # -Wdouble-promotion
-CFLAGS:=-pedantic -Wall -Wextra -Werror -Og -g3  -W -std=gnu18 \
+CFLAGS:=-pthread -pedantic -Wall -Wextra -Werror -Og -g3  -W -std=gnu18 \
 	-Wconversion -Warith-conversion \
 	-Wuninitialized -Wformat=2 -fanalyzer
 
-#LDFLAGS:=-lm
-LDFLAGS:=
+LDFLAGS:=-lm
 
 
 .PHONY: all
